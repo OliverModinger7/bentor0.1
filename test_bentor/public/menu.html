@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #f5f5f5;
+            overflow: auto;
+        }
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Cursos</h2>
+        <ul id="courses"></ul>
+        <h2>Alumnos</h2>
+        <ul id="students"></ul>
+    </div>
+    <div class="content">
+        <!-- Content goes here -->
+    </div>
+
+    <script>
+        // Replace these with actual data
+        const courses = ['Course 1', 'Course 2', 'Course 3'];
+        const students = ['Student 1', 'Student 2', 'Student 3'];
+
+        const coursesList = document.getElementById('courses');
+        const studentsList = document.getElementById('students');
+
+        courses.forEach(course => {
+            const li = document.createElement('li');
+            li.textContent = course;
+            coursesList.appendChild(li);
+        });
+
+        students.forEach(student => {
+            const li = document.createElement('li');
+            li.textContent = student;
+            studentsList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
